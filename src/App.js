@@ -1,5 +1,5 @@
 import './App.css';
-
+import Instructions from './Instructions';
 
 const emojis = [
   {
@@ -30,8 +30,8 @@ const displayAction = false; // hide paragraph when false but show <p> when true
   return (
     <div className="container">
      <h1 id={greeting}>Hello World</h1>
-     {!displayAction && <p>Click an emoji</p>}
-     
+     {displayAction && <p>What are you looking at ?</p>}
+     <Instructions />
        <ul>
         {
           emojis.map(emoji => (
